@@ -1,0 +1,23 @@
+[PROJECT]
+Target=buton1.hex
+Processor_Text=PIC16F877
+CCSVersion=5.112
+Compiler=PCM
+[Target Data]
+FileList=buton1.c
+[buton1.c]
+Type=4
+[mru-list]
+1=buton1.c
+[Units]
+Count=1
+1=buton1 (main)
+
+[defines]
+buildcount=1
+
+[ProjectLog]
+Days=1
+D1=05-12-2023
+D1_L=1
+D1_L1=[54288]Project Closed.

@@ -1,0 +1,46 @@
+[PROJECT]
+Target=timer_56.hex
+Processor_Text=PIC16F877
+CCSVerions=5.112
+Compiler=PCM
+CCSVersion=5.112
+[Target Data]
+FileList=timer_56.c
+[Directories]
+Include=
+[C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 7\ccs\timer_56]
+Type=4
+[mru-list]
+1=timer_56.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=1
+D1=05-12-2023
+D1_L=7
+D1_L1=[4799]Project Opened.
+D1_L2=[4802]Started Editing.
+D1_L3=[5102]Stopped Editing.
+TotalEdit=1
+TotalDebug=0
+D1_E=1
+D1_D=0
+D1_L4=[7505]Project Closed.
+D1_L5=[39901]Project Opened.
+D1_L6=[39915]Project Opened.
+D1_L7=[43584]Project Closed.
+
+[Opened Files]
+1=timer_56.c
+t1=1
+Count=1
+[timer_56.c]
+Type=4
+[Units]
+Count=1
+1=timer_56 (main)
+
+[defines]
+buildcount=1

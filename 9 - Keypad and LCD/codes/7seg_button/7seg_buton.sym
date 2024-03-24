@@ -1,0 +1,63 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     tus
+021     @TRIS_C
+022     MAIN.x
+023     MAIN.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  digit.call
+000008  digit.data
+000018  keypad_oku
+000054  @cinit1
+000054  MAIN
+00005F  @cinit2
+
+Project Directory:
+    C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 9\ccs\7seg_buton\
+
+Project Files:
+    7seg_buton.c                                            [16-Oca-24 10:36  CRC=050FD899]
+    ..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16f877.h [12-Ara-23 14:08  CRC=ED3EFA20]
+
+Source signature=DF8DCCD9
+Program memory checksum=0000
+Hex file CRC=17D3
+
+Units:
+    C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 9\ccs\7seg_buton\7seg_buton (main)
+
+Compiler Settings:
+    Processor:      PIC16F877
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   7seg_buton.xsym
+    Errors:      7seg_buton.err
+    Ext Symbols: 7seg_buton.esym
+    INHX8:       7seg_buton.hex
+    Symbols:     7seg_buton.sym
+    List:        7seg_buton.lst
+    Debug/COFF:  7seg_buton.cof
+    Project:     7seg_buton.ccspjt
+    Call Tree:   7seg_buton.tre
+    Statistics:  7seg_buton.STA

@@ -1,0 +1,52 @@
+[PROJECT]
+Target=ortakanod.hex
+Processor_Text=PIC16F877
+CCSVersion=5.112
+Compiler=PCM
+[Target Data]
+FileList=ortakanod.c
+[ortakanod.c]
+Type=4
+[mru-list]
+1=ortakanod.c
+
+[defines]
+buildcount=15
+
+[Opened Files]
+1=ortakanod.c
+t1=1
+2=..\0dan9\0dan9.c
+t2=15
+Count=2
+
+[ProjectLog]
+Days=3
+D1=14-11-2023
+D1_L=4
+D1_L1=[51868]Stopped Editing.
+D1_L2=[51940]Started Editing.
+D1_L3=[52369]Stopped Editing.
+TotalEdit=10
+TotalDebug=0
+D1_E=3
+D1_D=0
+D1_L4=[52910]Project Closed.
+D2=30-11-2023
+D2_L=4
+D2_L1=[45]Project Opened.
+D2_L2=[2943]Started Editing.
+D2_L3=[3622]Stopped Editing.
+D2_E=7
+D2_D=0
+D2_L4=[4264]Project Closed.
+D3=05-12-2023
+D3_L=2
+D3_L1=[4639]Project Opened.
+D3_L2=[4799]Project Closed.
+
+[fileformats]
+forcecoff=0
+[Units]
+Count=1
+1=ortakanod (main)

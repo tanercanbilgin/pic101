@@ -1,0 +1,5 @@
+Compiling C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 6\ccs\dogrukod\dogrukod on 18-Kas-23 at 23:09
+>>> Warning 203 "C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 6\ccs\dogrukod\dogrukod.c" Line 19(1,1): Condition always TRUE
+      Memory usage:   ROM=1%      RAM=2% - 2%
+      0 Errors,  1 Warnings.
+Build Successful.

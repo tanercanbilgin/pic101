@@ -1,0 +1,183 @@
+CCS PCM C Compiler, Version 5.112, 5967               16-Oca-24 00:29
+
+               Filename:   C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 8\ccs\compare\compare.lst
+
+               ROM used:   115 words (1%)
+                           Largest free fragment is 2048
+               RAM used:   12 (3%) at main() level
+                           12 (3%) worst case
+               Stack used: 1 locations (0 in main + 1 for interrupts)
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   03B
+0003:  NOP
+0004:  MOVWF  7F
+0005:  SWAPF  03,W
+0006:  CLRF   03
+0007:  MOVWF  21
+0008:  MOVF   0A,W
+0009:  MOVWF  20
+000A:  CLRF   0A
+000B:  MOVF   04,W
+000C:  MOVWF  22
+000D:  MOVF   77,W
+000E:  MOVWF  23
+000F:  MOVF   78,W
+0010:  MOVWF  24
+0011:  MOVF   79,W
+0012:  MOVWF  25
+0013:  MOVF   7A,W
+0014:  MOVWF  26
+0015:  BCF    03.7
+0016:  BCF    03.5
+0017:  MOVLW  8D
+0018:  MOVWF  04
+0019:  BTFSS  00.0
+001A:  GOTO   01D
+001B:  BTFSC  0D.0
+001C:  GOTO   02E
+001D:  MOVF   22,W
+001E:  MOVWF  04
+001F:  MOVF   23,W
+0020:  MOVWF  77
+0021:  MOVF   24,W
+0022:  MOVWF  78
+0023:  MOVF   25,W
+0024:  MOVWF  79
+0025:  MOVF   26,W
+0026:  MOVWF  7A
+0027:  MOVF   20,W
+0028:  MOVWF  0A
+0029:  SWAPF  21,W
+002A:  MOVWF  03
+002B:  SWAPF  7F,F
+002C:  SWAPF  7F,W
+002D:  RETFIE
+002E:  BCF    0A.3
+002F:  BCF    0A.4
+0030:  GOTO   031
+.................... #include <16f877.h>
+.................... //////////// Standard Header file for the PIC16F877 device ////////////////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... ////        (C) Copyright 1996, 2020 Custom Computer Services          ////
+.................... //// This source code may only be used by licensed users of the CCS C  ////
+.................... //// compiler.  This source code may only be distributed to other      ////
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction ////
+.................... //// or distribution is permitted without written permission.          ////
+.................... //// Derivative programs created using this software in object code    ////
+.................... //// form are not restricted in any way.                               ////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... #device PIC16F877
+.................... 
+.................... #list
+.................... 
+.................... #fuses XT, NOWDT, NOPROTECT, NOBROWNOUT, NOLVP, NOPUT, NOWRT, NODEBUG, NOCPD
+.................... #use delay(clock = 4000000)
+.................... #use fast_io(b)
+.................... #use fast_io(c)
+.................... //****** CCP 2 kesmesi *****************
+.................... #int_ccp2
+.................... void ccp2_kesme() // kesme fonksiyonu
+.................... {
+....................     set_Timer1(0);
+0031:  CLRF   0E
+0032:  CLRF   0F
+0033:  CLRF   0E
+0034:  NOP
+....................     output_toggle(pin_b0);
+0035:  MOVLW  01
+0036:  XORWF  06,F
+0037:  BCF    0D.0
+0038:  BCF    0A.3
+0039:  BCF    0A.4
+003A:  GOTO   01D
+.................... }
+.................... //********* ANA PROGRAM FONKSIYONU********
+.................... void main()
+003B:  MOVF   03,W
+003C:  ANDLW  1F
+003D:  MOVWF  03
+003E:  BSF    03.5
+003F:  BSF    1F.0
+0040:  BSF    1F.1
+0041:  BSF    1F.2
+0042:  BCF    1F.3
+0043:  BCF    03.7
+.................... {
+....................     setup_psp(PSP_DISABLED);          // PSP devre disi
+0044:  BCF    09.4
+....................     setup_spi(SPI_SS_DISABLED);       // SPI devre disi
+0045:  BCF    03.5
+0046:  BCF    14.5
+0047:  MOVLW  01
+0048:  MOVWF  14
+0049:  MOVLW  00
+004A:  BSF    03.5
+004B:  MOVWF  14
+....................     setup_timer_2(T2_DISABLED, 0, 1); // T2 devre disi
+004C:  MOVWF  78
+004D:  BCF    03.5
+004E:  MOVWF  12
+004F:  MOVLW  00
+0050:  BSF    03.5
+0051:  MOVWF  12
+....................     setup_adc_ports(NO_ANALOGS);      // analog giris yok
+0052:  BSF    1F.0
+0053:  BSF    1F.1
+0054:  BSF    1F.2
+0055:  BCF    1F.3
+....................     setup_adc(ADC_OFF);               // ADC kapali
+0056:  BCF    03.5
+0057:  BCF    1F.0
+....................     setup_CCP1(CCP_OFF);              // CCP2 devredisi
+0058:  MOVLW  F0
+0059:  ANDWF  17,F
+.................... 
+....................     set_tris_b(0x00);
+005A:  MOVLW  00
+005B:  BSF    03.5
+005C:  MOVWF  06
+....................     set_tris_c(0x01);
+005D:  MOVLW  01
+005E:  MOVWF  07
+....................     output_b(0x00);
+005F:  BCF    03.5
+0060:  CLRF   06
+.................... 
+....................     setup_timer_1(T1_EXTERNAL_SYNC | T1_DIV_BY_1);
+0061:  MOVLW  83
+0062:  MOVWF  10
+....................     setup_ccp2(CCP_COMPARE_INT);
+0063:  MOVLW  0A
+0064:  MOVWF  1D
+.................... 
+....................     enable_interrupts(INT_CCP2);
+0065:  BSF    03.5
+0066:  BSF    0D.0
+....................     enable_interrupts(GLOBAL);
+0067:  MOVLW  C0
+0068:  BCF    03.5
+0069:  IORWF  0B,F
+.................... 
+....................     CCP_2 = 0x07;
+006A:  CLRF   1C
+006B:  MOVLW  07
+006C:  MOVWF  1B
+.................... 
+....................     set_Timer1(0);
+006D:  CLRF   0E
+006E:  CLRF   0F
+006F:  CLRF   0E
+0070:  NOP
+....................     while (1)
+....................     {
+0071:  GOTO   071
+....................     }
+.................... }
+0072:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F39   XT NOWDT NOPUT NOBROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

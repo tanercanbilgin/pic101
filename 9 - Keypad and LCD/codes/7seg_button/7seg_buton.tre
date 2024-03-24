@@ -1,0 +1,6 @@
+ÀÄ7seg_buton
+   ÀÄMAIN  0/65  Ram=2
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄ@cinit2  (Inline)  Ram=0
+      ÃÄkeypad_oku  0/60  Ram=0
+      ÀÄ@const694  0/20  Ram=0

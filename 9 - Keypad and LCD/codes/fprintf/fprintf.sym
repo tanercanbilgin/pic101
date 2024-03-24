@@ -1,0 +1,144 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+006     lcd
+006     lcdlat
+008     PSP_DATA
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     @TRIS_C
+021-022 @sprintf_string
+023     MAIN.d1
+024-027 MAIN.d2
+028     @PRINTF_D_719.P1
+028     @PSTRINGCN7_719.P2
+028-02B @PRINTF_L32D_719FPFPF.P3
+028     lcd_init.i
+028     MAIN.@SCRATCH1
+028     @PSTRINGC7_719.@SCRATCH1
+029-02C lcd_init.LCD_INIT_STRING
+029     @PRINTF_D_719.P1
+029     @PSTRINGC7_719.@SCRATCH2
+029     @PSTRINGCN7_719.@SCRATCH1
+02A     @PSTRINGC7_719.@SCRATCH3
+02A     @PSTRINGCN7_719.@SCRATCH2
+02A     @PRINTF_D_719.@SCRATCH1
+02B     @PSTRINGC7_719.@SCRATCH4
+02B     @PSTRINGCN7_719.@SCRATCH3
+02B     @PRINTF_D_719.@SCRATCH2
+02C     @PRINTF_L32D_719FPFPF.P1
+02C     @PSTRINGCN7_719.@SCRATCH4
+02C     @PRINTF_D_719.@SCRATCH3
+02D     lcd_init.@SCRATCH1
+02D     @PRINTF_D_719.@SCRATCH4
+02D     @PRINTF_L32D_719FPFPF.@SCRATCH1
+02E     @DIV88.P1
+02E     @PRINTF_L32D_719FPFPF.@SCRATCH2
+02F     @DIV88.P1
+02F     @PRINTF_L32D_719FPFPF.@SCRATCH3
+030     @DIV88.@SCRATCH1
+030     @PRINTF_L32D_719FPFPF.@SCRATCH4
+031     @PRINTF_L32D_719FPFPF.@SCRATCH5
+032     @PRINTF_L32D_719FPFPF.@SCRATCH6
+033     @PRINTF_L32D_719FPFPF.@SCRATCH7
+034     @PRINTF_L32D_719FPFPF.@SCRATCH8
+035-038 @MULFF.P1
+035     lcd_putc.c
+035-038 @DIV3232.P1
+035-038 @FTOSD.P2
+036     @delay_ms1.P1
+036     lcd_gotoxy.x
+037     lcd_gotoxy.y
+038     lcd_gotoxy.address
+039-03C @MULFF.P1
+039-03C @DIV3232.P2
+039     lcd_gotoxy.@SCRATCH1
+039     @FTOSD.@SCRATCH1
+03A     lcd_send_byte.address
+03B     lcd_send_byte.n
+03C     lcd_read_byte.low
+03C     lcd_send_byte.@SCRATCH1
+03D     lcd_read_byte.high
+03D     lcd_send_nibble.n
+03D     @MULFF.@SCRATCH1
+03D     @DIV3232.@SCRATCH1
+03E     lcd_read_byte.@SCRATCH1
+03E     @MULFF.@SCRATCH2
+03E     @DIV3232.@SCRATCH2
+03F     @MULFF.@SCRATCH3
+03F     @DIV3232.@SCRATCH3
+040     @MULFF.@SCRATCH4
+040     @DIV3232.@SCRATCH4
+041     @MULFF.@SCRATCH5
+041     @DIV3232.@SCRATCH5
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+086     lcdtris
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @const737.call
+000005  @const742.call
+000009  @const751.call
+00000D  @delay_ms1
+000022  lcd_send_nibble
+00002E  lcd_read_nibble
+000034  lcd_send_byte
+00003A  lcd_read_byte
+000074  lcd_init
+0000B2  lcd_gotoxy
+0000C4  lcd_putc
+0000F0  @PSTRINGC7_719
+000148  @PSTRINGCN7_719
+00019F  @DIV88
+0001B4  @PRINTF_D_719
+00020D  @DIV3232
+00025C  @PRINTF_L32D_719FPFPF
+000270  @MULFF
+0002F6  @FTOSD
+0003B1  MAIN
+0003B1  @cinit1
+0003BD  @cinit2
+
+Project Directory:
+    C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 9\ccs\fprintf\
+
+Project Files:
+    fprintf.c                                               [25-Ara-23 21:26  CRC=D0088318]
+    ..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16f877.h [12-Ara-23 14:08  CRC=ED3EFA20]
+    ..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c [22-Þub-16 10:05  CRC=D1A6378A]
+
+Source signature=6093EC4C
+Program memory checksum=0000
+Hex file CRC=04ED
+
+Units:
+    C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 9\ccs\fprintf\fprintf (main)
+
+Compiler Settings:
+    Processor:      PIC16F877
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   fprintf.xsym
+    Errors:      fprintf.err
+    Ext Symbols: fprintf.esym
+    INHX8:       fprintf.hex
+    Symbols:     fprintf.sym
+    List:        fprintf.lst
+    Debug/COFF:  fprintf.cof
+    Project:     fprintf.ccspjt
+    Call Tree:   fprintf.tre
+    Statistics:  fprintf.STA

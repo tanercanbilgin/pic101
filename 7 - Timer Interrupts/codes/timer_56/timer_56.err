@@ -1,0 +1,5 @@
+Compiling C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 7\ccs\timer_56 on 05-Ara-23 at 01:22
+>>> Warning 203 "C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 7\ccs\timer_56.c" Line 32(1,1): Condition always TRUE
+      Memory usage:   ROM=2%      RAM=4% - 4%
+      0 Errors,  1 Warnings.
+Build Successful.

@@ -1,0 +1,43 @@
+[PROJECT]
+Target=main.hex
+Processor_Text=PIC16F877
+CCSVerions=5.112
+Compiler=PCM
+CCSVersion=5.112
+[Target Data]
+FileList=main.c
+[Directories]
+Include=
+[C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 4\compiler\1357\main]
+Type=4
+[mru-list]
+1=main.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=1
+D1=07-11-2023
+D1_L=4
+D1_L1=[57410]Project Opened.
+D1_L2=[57482]Started Editing.
+D1_L3=[58053]Stopped Editing.
+TotalEdit=10
+TotalDebug=0
+D1_E=10
+D1_D=0
+D1_L4=[58053]Project Closed.
+
+[Opened Files]
+1=main.c
+t1=5
+Count=1
+[main.c]
+Type=4
+[Units]
+Count=1
+1=main (main)
+
+[defines]
+buildcount=1

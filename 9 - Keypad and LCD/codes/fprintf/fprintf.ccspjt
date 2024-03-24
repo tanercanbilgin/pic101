@@ -1,0 +1,28 @@
+[PROJECT]
+Target=fprintf.hex
+Processor_Text=PIC16F877
+CCSVersion=5.112
+Compiler=PCM
+[Target Data]
+FileList=fprintf.c
+[fprintf.c]
+Type=4
+[mru-list]
+1=fprintf.c
+[Units]
+Count=1
+1=fprintf (main)
+
+[defines]
+buildcount=1
+
+[ProjectLog]
+Days=1
+D1=25-12-2023
+D1_L=2
+D1_L1=[77504]Stopped Editing.
+TotalEdit=1
+TotalDebug=0
+D1_E=1
+D1_D=0
+D1_L2=[77756]Project Closed.

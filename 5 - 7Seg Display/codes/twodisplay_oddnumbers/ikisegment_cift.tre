@@ -1,0 +1,11 @@
+ÀÄikisegment_cift
+   ÀÄmain  0/118  Ram=1
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄ@cinit2  (Inline)  Ram=0
+      ÃÄ@delay_ms1  0/21  Ram=1
+      ÃÄ@DIV88  0/21  Ram=3
+      ÃÄ@DIV88  0/21  Ram=3
+      ÃÄ@const698  0/20  Ram=0
+      ÃÄ@delay_ms1  0/21  Ram=1
+      ÃÄ@const698  0/20  Ram=0
+      ÀÄ@delay_ms1  0/21  Ram=1

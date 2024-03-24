@@ -1,0 +1,28 @@
+[PROJECT]
+Target=diy1.hex
+Processor_Text=PIC16F877
+CCSVersion=5.112
+Compiler=PCM
+[Target Data]
+FileList=diy1.c
+[diy1.c]
+Type=4
+[mru-list]
+1=diy1.c
+
+[defines]
+buildcount=6
+
+[Opened Files]
+1=diy1.c
+t1=17
+Count=1
+[Units]
+Count=1
+1=diy1 (main)
+
+[ProjectLog]
+Days=1
+D1=25-12-2023
+D1_L=1
+D1_L1=[85844]Project Closed.

@@ -1,0 +1,23 @@
+[PROJECT]
+Target=ikisegment.hex
+Processor_Text=PIC16F877
+CCSVersion=5.112
+Compiler=PCM
+[Target Data]
+FileList=ikisegment.c
+[ikisegment.c]
+Type=4
+[mru-list]
+1=ikisegment.c
+[Units]
+Count=1
+1=ikisegment (main)
+
+[defines]
+buildcount=1
+
+[ProjectLog]
+Days=1
+D1=14-11-2023
+D1_L=1
+D1_L1=[53821]Project Closed.

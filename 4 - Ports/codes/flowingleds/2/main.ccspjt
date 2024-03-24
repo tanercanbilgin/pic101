@@ -1,0 +1,51 @@
+[PROJECT]
+Target=main.hex
+Processor_Text=PIC16F877
+CCSVerions=5.112
+Compiler=PCM
+CCSVersion=5.112
+[Target Data]
+FileList=main.c
+[Directories]
+Include=
+[C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 4\compiler\kayan ledler\2\main]
+Type=4
+[mru-list]
+1=main.c
+
+[ProjectLog]
+Days=1
+D1=07-11-2023
+D1_L=10
+D1_L1=[51690]Stopped Editing.
+TotalEdit=4
+TotalDebug=0
+D1_E=4
+D1_D=0
+D1_L2=[51690]Project Closed.
+D1_L3=[51690]Project Opened.
+D1_L4=[51693]Started Editing.
+D1_L5=[51993]Stopped Editing.
+D1_L6=[52308]Project Closed.
+D1_L7=[58742]Project Opened.
+D1_L8=[58810]Started Editing.
+D1_L9=[58917]Stopped Editing.
+D1_L10=[58917]Project Closed.
+
+[Opened Files]
+1=main.c
+t1=5
+Count=1
+2=main.c
+t2=1
+
+[fileformats]
+forcecoff=0
+[main.c]
+Type=4
+
+[defines]
+buildcount=7
+[Units]
+Count=1
+1=main (main)

@@ -1,0 +1,36 @@
+ÀÄlcd_test2_3
+   ÀÄMAIN  0/81  Ram=1
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄ@cinit2  (Inline)  Ram=0
+      ÃÄlcd_init  0/62  Ram=6
+      ³  ÃÄ@delay_ms1  0/21  Ram=1
+      ³  ÃÄlcd_send_nibble  0/12  Ram=1
+      ³  ÃÄ@delay_ms1  0/21  Ram=1
+      ³  ÃÄlcd_send_nibble  0/12  Ram=1
+      ³  ÃÄ@delay_ms1  0/21  Ram=1
+      ³  ÀÄlcd_send_byte  0/64  Ram=3
+      ³     ÃÄlcd_read_byte  (Inline)  Ram=3
+      ³     ³  ÃÄlcd_read_nibble  0/6  Ram=0
+      ³     ³  ÀÄlcd_read_nibble  0/6  Ram=0
+      ³     ÃÄlcd_send_nibble  0/12  Ram=1
+      ³     ÀÄlcd_send_nibble  0/12  Ram=1
+      ÃÄ@delay_ms1  0/21  Ram=1
+      ÃÄlcd_gotoxy  0/18  Ram=4
+      ³  ÀÄlcd_send_byte  0/64  Ram=3
+      ³     ÀÄ*
+      ÃÄ@delay_ms1  0/21  Ram=1
+      ÀÄ@PSTRINGC7_719  0/88  Ram=4
+         ÃÄlcd_putc  0/44  Ram=1
+         ³  ÃÄlcd_gotoxy  0/18  Ram=4
+         ³  ³  ÀÄ*
+         ³  ÃÄlcd_send_byte  0/64  Ram=3
+         ³  ³  ÀÄ*
+         ³  ÃÄ@delay_ms1  0/21  Ram=1
+         ³  ÃÄlcd_gotoxy  0/18  Ram=4
+         ³  ³  ÀÄ*
+         ³  ÃÄlcd_send_byte  0/64  Ram=3
+         ³  ³  ÀÄ*
+         ³  ÀÄlcd_send_byte  0/64  Ram=3
+         ³     ÀÄ*
+         ÀÄlcd_putc  0/44  Ram=1
+            ÀÄ*

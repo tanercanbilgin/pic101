@@ -1,0 +1,63 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     i
+021     @TRIS_C
+022     main.@SCRATCH1
+023     @delay_ms1.P1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  digit.call
+000008  digit.data
+000018  @delay_ms1
+00002F  main
+00002F  @cinit1
+00003A  @cinit2
+
+Project Directory:
+    C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 5\ccs\0dan9\
+
+Project Files:
+    0dan9.c                                                 [16-Kas-23 14:14  CRC=0FF8844B]
+    ..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16f877.h [21-Eki-22 11:02  CRC=066EA136]
+
+Source signature=1CD5C6B7
+Program memory checksum=0000
+Hex file CRC=5A79
+
+Units:
+    C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 5\ccs\0dan9\0dan9 (main)
+
+Compiler Settings:
+    Processor:      PIC16F877
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   0dan9.xsym
+    Errors:      0dan9.err
+    Ext Symbols: 0dan9.esym
+    INHX8:       0dan9.hex
+    Symbols:     0dan9.sym
+    List:        0dan9.lst
+    Debug/COFF:  0dan9.cof
+    Project:     0dan9.ccspjt
+    Call Tree:   0dan9.tre
+    Statistics:  0dan9.STA

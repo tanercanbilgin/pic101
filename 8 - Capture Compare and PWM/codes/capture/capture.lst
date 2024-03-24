@@ -1,0 +1,203 @@
+CCS PCM C Compiler, Version 5.112, 5967               16-Oca-24 00:28
+
+               Filename:   C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 8\ccs\capture\capture.lst
+
+               ROM used:   128 words (2%)
+                           Largest free fragment is 2048
+               RAM used:   12 (3%) at main() level
+                           12 (3%) worst case
+               Stack used: 1 locations (0 in main + 1 for interrupts)
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   048
+0003:  NOP
+0004:  MOVWF  7F
+0005:  SWAPF  03,W
+0006:  CLRF   03
+0007:  MOVWF  21
+0008:  MOVF   0A,W
+0009:  MOVWF  20
+000A:  CLRF   0A
+000B:  MOVF   04,W
+000C:  MOVWF  22
+000D:  MOVF   77,W
+000E:  MOVWF  23
+000F:  MOVF   78,W
+0010:  MOVWF  24
+0011:  MOVF   79,W
+0012:  MOVWF  25
+0013:  MOVF   7A,W
+0014:  MOVWF  26
+0015:  BCF    03.7
+0016:  BCF    03.5
+0017:  MOVLW  8C
+0018:  MOVWF  04
+0019:  BTFSS  00.2
+001A:  GOTO   01D
+001B:  BTFSC  0C.2
+001C:  GOTO   02E
+001D:  MOVF   22,W
+001E:  MOVWF  04
+001F:  MOVF   23,W
+0020:  MOVWF  77
+0021:  MOVF   24,W
+0022:  MOVWF  78
+0023:  MOVF   25,W
+0024:  MOVWF  79
+0025:  MOVF   26,W
+0026:  MOVWF  7A
+0027:  MOVF   20,W
+0028:  MOVWF  0A
+0029:  SWAPF  21,W
+002A:  MOVWF  03
+002B:  SWAPF  7F,F
+002C:  SWAPF  7F,W
+002D:  RETFIE
+002E:  BCF    0A.3
+002F:  BCF    0A.4
+0030:  GOTO   031
+.................... #include <16f877.h>
+.................... //////////// Standard Header file for the PIC16F877 device ////////////////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... ////        (C) Copyright 1996, 2020 Custom Computer Services          ////
+.................... //// This source code may only be used by licensed users of the CCS C  ////
+.................... //// compiler.  This source code may only be distributed to other      ////
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction ////
+.................... //// or distribution is permitted without written permission.          ////
+.................... //// Derivative programs created using this software in object code    ////
+.................... //// form are not restricted in any way.                               ////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... #device PIC16F877
+.................... 
+.................... #list
+.................... 
+.................... #fuses XT, NOWDT, NOPROTECT, NOBROWNOUT, NOLVP, NOPUT, NOWRT, NODEBUG, NOCPD
+.................... #use delay(clock = 4000000)
+.................... #use fast_io(b)
+.................... #use fast_io(c)
+.................... 
+.................... #int_ccp1
+.................... void ccp1_kesme() // CCP1 kesmesi fonksiyonu
+.................... {
+....................     set_Timer1(0); // Timer1'i sıfırla
+0031:  CLRF   0E
+0032:  CLRF   0F
+0033:  CLRF   0E
+0034:  NOP
+.................... 
+....................     // CCP1 modül tarafından yakalanan değeri kontrol et
+....................     if (CCP_1 < 10000)
+0035:  MOVF   16,W
+0036:  SUBLW  27
+0037:  BTFSS  03.0
+0038:  GOTO   042
+0039:  BTFSS  03.2
+003A:  GOTO   03F
+003B:  MOVF   15,W
+003C:  SUBLW  0F
+003D:  BTFSS  03.0
+003E:  GOTO   042
+....................         output_b(0x01); // CCP1 tarafından yakalanan değer 10000'den küçükse kırmızı LED'i yak
+003F:  MOVLW  01
+0040:  MOVWF  06
+0041:  GOTO   044
+....................     else
+....................         output_b(0x02); // CCP1 tarafından yakalanan değer 10000'den büyükse yeşil LED'i yak
+0042:  MOVLW  02
+0043:  MOVWF  06
+0044:  BCF    0C.2
+0045:  BCF    0A.3
+0046:  BCF    0A.4
+0047:  GOTO   01D
+.................... }
+.................... 
+.................... //********* ANA PROGRAM FONKSIYONU********
+.................... void main()
+0048:  MOVF   03,W
+0049:  ANDLW  1F
+004A:  MOVWF  03
+004B:  BSF    03.5
+004C:  BSF    1F.0
+004D:  BSF    1F.1
+004E:  BSF    1F.2
+004F:  BCF    1F.3
+0050:  BCF    03.7
+.................... {
+....................     setup_psp(PSP_DISABLED);          // PSP devre dışı
+0051:  BCF    09.4
+....................     setup_spi(SPI_SS_DISABLED);       // SPI devre dışı
+0052:  BCF    03.5
+0053:  BCF    14.5
+0054:  MOVLW  01
+0055:  MOVWF  14
+0056:  MOVLW  00
+0057:  BSF    03.5
+0058:  MOVWF  14
+....................     setup_timer_2(T2_DISABLED, 0, 1); // T2 devre dışı
+0059:  MOVWF  78
+005A:  BCF    03.5
+005B:  MOVWF  12
+005C:  MOVLW  00
+005D:  BSF    03.5
+005E:  MOVWF  12
+....................     setup_adc_ports(NO_ANALOGS);      // analog giriş yok
+005F:  BSF    1F.0
+0060:  BSF    1F.1
+0061:  BSF    1F.2
+0062:  BCF    1F.3
+....................     setup_adc(ADC_OFF);               // ADC kapalı
+0063:  BCF    03.5
+0064:  BCF    1F.0
+....................     setup_CCP2(CCP_OFF);              // CCP2 devre dışı
+0065:  MOVLW  F0
+0066:  ANDWF  1D,F
+.................... 
+....................     set_tris_b(0x0); // B portunu çıkış olarak ayarla
+0067:  MOVLW  00
+0068:  BSF    03.5
+0069:  MOVWF  06
+....................     set_tris_c(0x4); // C portunun C2 pini (CCP1 modülü girişi) giriş olarak ayarla
+006A:  MOVLW  04
+006B:  MOVWF  07
+....................     output_b(0x00);  // B portunu temizle
+006C:  BCF    03.5
+006D:  CLRF   06
+.................... 
+....................     setup_timer_1(T1_INTERNAL | T1_DIV_BY_1); // Timer1'i içsel osilatör ile ve bölme oranı 1 olarak ayarla
+006E:  MOVLW  85
+006F:  MOVWF  10
+....................     set_Timer1(0); // Timer1'i sıfırla
+0070:  CLRF   0E
+0071:  CLRF   0F
+0072:  CLRF   0E
+0073:  NOP
+.................... 
+....................     setup_ccp1(CCP_CAPTURE_RE); // CCP1 modülünü yükselen kenar yakalama modunda ayarla
+0074:  CLRF   17
+0075:  MOVLW  05
+0076:  MOVWF  17
+.................... 
+....................     enable_interrupts(INT_CCP1); // CCP1 kesmelerini etkinleştir
+0077:  BSF    03.5
+0078:  BSF    0C.2
+....................     enable_interrupts(GLOBAL);   // Genel kesmeleri etkinleştir
+0079:  MOVLW  C0
+007A:  BCF    03.5
+007B:  IORWF  0B,F
+.................... 
+....................     CCP_1 = 0x00; // CCP1 sıfırla
+007C:  CLRF   16
+007D:  CLRF   15
+.................... 
+....................     while (1)
+....................     {
+007E:  GOTO   07E
+....................     }
+.................... }
+007F:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F39   XT NOWDT NOPUT NOBROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

@@ -1,0 +1,187 @@
+CCS PCM C Compiler, Version 5.112, 5967               13-Kas-23 23:56
+
+               Filename:   C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 5\ccs\0dan9_a10\0dan9_a10.lst
+
+               ROM used:   123 words (2%)
+                           Largest free fragment is 2048
+               RAM used:   8 (2%) at main() level
+                           9 (2%) worst case
+               Stack used: 0 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   02F
+0003:  NOP
+.................... #include <16f877.h>
+.................... //////////// Standard Header file for the PIC16F877 device ////////////////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... ////        (C) Copyright 1996, 2020 Custom Computer Services          ////
+.................... //// This source code may only be used by licensed users of the CCS C  ////
+.................... //// compiler.  This source code may only be distributed to other      ////
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction ////
+.................... //// or distribution is permitted without written permission.          ////
+.................... //// Derivative programs created using this software in object code    ////
+.................... //// form are not restricted in any way.                               ////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... #device PIC16F877
+0004:  BCF    0A.0
+0005:  BCF    0A.1
+0006:  BCF    0A.2
+0007:  ADDWF  02,F
+0008:  RETLW  3F
+0009:  RETLW  06
+000A:  RETLW  5B
+000B:  RETLW  4F
+000C:  RETLW  66
+000D:  RETLW  6D
+000E:  RETLW  7C
+000F:  RETLW  07
+0010:  RETLW  7F
+0011:  RETLW  6F
+0012:  RETLW  77
+0013:  RETLW  7C
+0014:  RETLW  39
+0015:  RETLW  5E
+0016:  RETLW  79
+0017:  RETLW  71
+.................... 
+.................... #list
+.................... 
+.................... #fuses XT, NOWDT, NOPROTECT, NOBROWNOUT, NOLVP, NOPUT, NOWRT, NODEBUG, NOCPD
+.................... 
+.................... #use delay(clock = 4000000)
+0018:  MOVLW  23
+0019:  MOVWF  04
+001A:  BCF    03.7
+001B:  MOVF   00,W
+001C:  BTFSC  03.2
+001D:  GOTO   02C
+001E:  MOVLW  01
+001F:  MOVWF  78
+0020:  CLRF   77
+0021:  DECFSZ 77,F
+0022:  GOTO   021
+0023:  DECFSZ 78,F
+0024:  GOTO   020
+0025:  MOVLW  4A
+0026:  MOVWF  77
+0027:  DECFSZ 77,F
+0028:  GOTO   027
+0029:  GOTO   02A
+002A:  DECFSZ 00,F
+002B:  GOTO   01E
+002C:  BCF    0A.3
+002D:  BCF    0A.4
+002E:  GOTO   072 (RETURN)
+.................... #use fast_io(a)
+.................... #use fast_io(b)
+.................... 
+.................... int i = 0;
+.................... const int digit[16] = {0x3f, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7C, 0x07, 0x7F, 0x6F, 0x77, 0x7C, 0x39, 0x5E, 0x79, 0x71};
+.................... 
+.................... void main()
+002F:  MOVF   03,W
+0030:  ANDLW  1F
+0031:  MOVWF  03
+0032:  CLRF   20
+0033:  MOVLW  FF
+0034:  MOVWF  21
+0035:  BSF    03.5
+0036:  BSF    1F.0
+0037:  BSF    1F.1
+0038:  BSF    1F.2
+0039:  BCF    1F.3
+003A:  BCF    03.7
+.................... {
+....................     setup_psp(PSP_DISABLED);    // PSP devre disi 
+003B:  BCF    09.4
+....................      setup_spi(SPI_SS_DISABLED);    //SPI devre disi 
+003C:  BCF    03.5
+003D:  BCF    14.5
+003E:  BCF    21.5
+003F:  MOVF   21,W
+0040:  BSF    03.5
+0041:  MOVWF  07
+0042:  BCF    03.5
+0043:  BSF    21.4
+0044:  MOVF   21,W
+0045:  BSF    03.5
+0046:  MOVWF  07
+0047:  BCF    03.5
+0048:  BCF    21.3
+0049:  MOVF   21,W
+004A:  BSF    03.5
+004B:  MOVWF  07
+004C:  MOVLW  01
+004D:  BCF    03.5
+004E:  MOVWF  14
+004F:  MOVLW  00
+0050:  BSF    03.5
+0051:  MOVWF  14
+....................     setup_timer_1(T1_DISABLED); // T1 devre disi 
+0052:  BCF    03.5
+0053:  CLRF   10
+....................     setup_timer_2(T2_DISABLED,0,1); // T2 devre disi 
+0054:  MOVWF  78
+0055:  MOVWF  12
+0056:  MOVLW  00
+0057:  BSF    03.5
+0058:  MOVWF  12
+....................     setup_adc_ports(NO_ANALOGS);    //analog giris yok 
+0059:  BSF    1F.0
+005A:  BSF    1F.1
+005B:  BSF    1F.2
+005C:  BCF    1F.3
+....................     setup_adc(ADC_OFF) ;    //ADC kapali
+005D:  BCF    03.5
+005E:  BCF    1F.0
+....................     setup_CCP1(CCP_OFF);    // CCP1 devre disi
+005F:  MOVLW  F0
+0060:  ANDWF  17,F
+....................     setup_CCP2(CCP_OFF);    // CCP2 devredisi
+0061:  ANDWF  1D,F
+.................... 
+....................     set_tris_a(0x00); // A portu butun pinler cikis
+0062:  MOVLW  00
+0063:  BSF    03.5
+0064:  MOVWF  05
+....................     set_tris_b(0x00); // B portu butun pinler cikis
+0065:  MOVWF  06
+....................     output_b(0x00);   // baslangicta 1. led yanik 
+0066:  BCF    03.5
+0067:  CLRF   06
+....................     output_a (0x00);
+0068:  CLRF   05
+.................... 
+....................     while (1)
+....................     {
+....................         output_b(digit[i]); // RB0 pin cikisi lojik-1
+0069:  MOVF   20,W
+006A:  CALL   004
+006B:  MOVWF  22
+006C:  MOVWF  06
+....................         delay_ms(1000); // 500 ms gecikme
+006D:  MOVLW  04
+006E:  MOVWF  22
+006F:  MOVLW  FA
+0070:  MOVWF  23
+0071:  GOTO   018
+0072:  DECFSZ 22,F
+0073:  GOTO   06F
+....................         i++;
+0074:  INCF   20,F
+....................         if (i == 10)
+0075:  MOVF   20,W
+0076:  SUBLW  0A
+0077:  BTFSC  03.2
+....................             i = 0;
+0078:  CLRF   20
+0079:  GOTO   069
+....................     }
+.................... }
+007A:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F39   XT NOWDT NOPUT NOBROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

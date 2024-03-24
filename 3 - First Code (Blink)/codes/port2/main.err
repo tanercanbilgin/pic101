@@ -1,0 +1,5 @@
+Compiling C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 3\compiler\port2\main on 06-Kas-23 at 11:52
+>>> Warning 202 "C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 3\compiler\port2\main.c" Line 7(6,7): Variable never used:   x
+      Memory usage:   ROM=1%      RAM=2% - 2%
+      0 Errors,  1 Warnings.
+Build Successful.

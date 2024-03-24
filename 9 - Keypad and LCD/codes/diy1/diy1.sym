@@ -1,0 +1,107 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+006     lcd
+006     lcdlat
+008     PSP_DATA
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     @TRIS_C
+021-022 @sprintf_string
+023     MAIN.sayi
+024     @PRINTF_D_719.P1
+024     lcd_init.i
+024     MAIN.@SCRATCH1
+024     @PSTRINGC7_719.@SCRATCH1
+025-028 lcd_init.LCD_INIT_STRING
+025     @PRINTF_D_719.P1
+025     @PSTRINGC7_719.@SCRATCH2
+026     @PSTRINGC7_719.@SCRATCH3
+026     @PRINTF_D_719.@SCRATCH1
+027     @PSTRINGC7_719.@SCRATCH4
+027     @PRINTF_D_719.@SCRATCH2
+028     @PRINTF_D_719.@SCRATCH3
+029     lcd_init.@SCRATCH1
+029     @PRINTF_D_719.@SCRATCH4
+02A     @DIV88.P1
+02A     lcd_putc.c
+02B     lcd_gotoxy.x
+02B     @DIV88.P1
+02B     @delay_ms1.P2
+02C     lcd_gotoxy.y
+02C     @DIV88.@SCRATCH1
+02D     lcd_gotoxy.address
+02E     lcd_gotoxy.@SCRATCH1
+02F     lcd_send_byte.address
+030     lcd_send_byte.n
+031     lcd_read_byte.low
+031     lcd_send_byte.@SCRATCH1
+032     lcd_read_byte.high
+032     lcd_send_nibble.n
+033     lcd_read_byte.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+086     lcdtris
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @const736.call
+000007  @const748.call
+00000A  @const750.call
+00000D  @delay_ms1
+000022  lcd_send_nibble
+00002E  lcd_read_nibble
+000034  lcd_send_byte
+00003A  lcd_read_byte
+000074  lcd_init
+0000B2  lcd_gotoxy
+0000C4  lcd_putc
+0000F0  @PSTRINGC7_719
+000146  @DIV88
+00015B  @PRINTF_D_719
+0001B2  @cinit1
+0001B2  MAIN
+0001BE  @cinit2
+
+Project Directory:
+    C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 9\ccs\diy1\
+
+Project Files:
+    diy1.c                                                  [25-Ara-23 23:32  CRC=9E968BF6]
+    ..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16f877.h [12-Ara-23 14:08  CRC=ED3EFA20]
+    ..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c [22-Þub-16 10:05  CRC=D1A6378A]
+
+Source signature=2F21F52A
+Program memory checksum=0000
+Hex file CRC=9881
+
+Units:
+    C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 9\ccs\diy1\diy1 (main)
+
+Compiler Settings:
+    Processor:      PIC16F877
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   diy1.xsym
+    Errors:      diy1.err
+    Ext Symbols: diy1.esym
+    INHX8:       diy1.hex
+    Symbols:     diy1.sym
+    List:        diy1.lst
+    Debug/COFF:  diy1.cof
+    Project:     diy1.ccspjt
+    Call Tree:   diy1.tre
+    Statistics:  diy1.STA

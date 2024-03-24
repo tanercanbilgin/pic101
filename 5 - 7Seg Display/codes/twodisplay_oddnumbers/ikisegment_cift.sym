@@ -1,0 +1,70 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     sayi
+021     frame
+022     birler
+023     onlar
+024     @TRIS_C
+025     @DIV88.P1
+025     main.@SCRATCH1
+026     @DIV88.P1
+026     @delay_ms1.P2
+027     @DIV88.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  digit.call
+000008  digit.data
+000018  @delay_ms1
+00002D  @DIV88
+000042  main
+000042  @cinit1
+000050  @cinit2
+
+Project Directory:
+    C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 5\ccs\ikisegment_cift\
+
+Project Files:
+    ikisegment_cift.c                                       [16-Kas-23 15:40  CRC=C1C9F06F]
+    ..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16f877.h [21-Eki-22 11:02  CRC=066EA136]
+
+Source signature=CEA732DB
+Program memory checksum=0000
+Hex file CRC=C65F
+
+Units:
+    C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 5\ccs\ikisegment_cift\ikisegment_cift (main)
+
+Compiler Settings:
+    Processor:      PIC16F877
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   ikisegment_cift.xsym
+    Errors:      ikisegment_cift.err
+    Ext Symbols: ikisegment_cift.esym
+    INHX8:       ikisegment_cift.hex
+    Symbols:     ikisegment_cift.sym
+    List:        ikisegment_cift.lst
+    Debug/COFF:  ikisegment_cift.cof
+    Project:     ikisegment_cift.ccspjt
+    Call Tree:   ikisegment_cift.tre
+    Statistics:  ikisegment_cift.STA

@@ -1,0 +1,41 @@
+[PROJECT]
+Target=timer1.hex
+Processor_Text=PIC16F877
+CCSVersion=5.112
+Compiler=PCM
+[Target Data]
+FileList=timer1.c
+[timer1.c]
+Type=4
+[mru-list]
+1=timer1.c
+
+[defines]
+buildcount=59
+
+[Opened Files]
+1=timer1.c
+t1=1
+Count=2
+2=..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16f877.h
+t2=1
+
+[ProjectLog]
+Days=1
+D1=05-12-2023
+D1_L=5
+D1_L1=[45618]Started Editing.
+D1_L2=[45920]Stopped Editing.
+TotalEdit=1
+TotalDebug=0
+D1_E=1
+D1_D=0
+D1_L3=[47203]Project Closed.
+D1_L4=[49072]Project Opened.
+D1_L5=[53765]Project Closed.
+
+[fileformats]
+forcecoff=0
+[Units]
+Count=1
+1=timer1 (main)

@@ -1,0 +1,64 @@
+[PROJECT]
+Target=main.hex
+Processor_Text=PIC16F877
+CCSVerions=5.112
+Compiler=PCM
+CCSVersion=5.112
+[Target Data]
+FileList=main.c
+[Directories]
+Include=
+[C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 4\compiler\kayan ledler\main]
+Type=4
+[mru-list]
+1=main.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=2
+D1=07-11-2023
+D1_L=19
+D1_L1=[41576]Project Opened.
+D1_L2=[41649]Project Closed.
+D1_L3=[42619]Project Opened.
+D1_L4=[42665]Project Closed.
+D1_L5=[48885]Project Opened.
+D1_L6=[49048]Started Editing.
+D1_L7=[49063]Project Closed.
+D1_L8=[49088]Project Opened.
+D1_L9=[49089]Started Editing.
+D1_L10=[49350]Project Closed.
+D1_L11=[49357]Project Opened.
+D1_L12=[49897]Started Editing.
+D1_L13=[50197]Stopped Editing.
+D1_L14=[50489]Project Opened.
+D1_L15=[51082]Started Editing.
+D1_L16=[51425]Stopped Editing.
+TotalEdit=1
+TotalDebug=0
+D1_E=1
+D1_D=0
+D1_L17=[51572]Project Closed.
+D1_L18=[58443]Project Opened.
+D1_L19=[58733]Project Closed.
+D2=10-11-2023
+D2_L=2
+D2_L1=[4837]Project Opened.
+D2_L2=[4837]Project Closed.
+
+[Opened Files]
+1=main.c
+t1=1
+Count=2
+2=main.xsym
+t2=1
+[main.c]
+Type=4
+
+[defines]
+buildcount=21
+[Units]
+Count=1
+1=main (main)

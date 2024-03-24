@@ -1,0 +1,240 @@
+CCS PCM C Compiler, Version 5.112, 5967               16-Oca-24 10:36
+
+               Filename:   C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 9\ccs\7seg_buton\7seg_buton.lst
+
+               ROM used:   149 words (2%)
+                           Largest free fragment is 2048
+               RAM used:   9 (2%) at main() level
+                           9 (2%) worst case
+               Stack used: 0 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   054
+0003:  NOP
+.................... #include <16f877.h>
+.................... //////////// Standard Header file for the PIC16F877 device ////////////////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... ////        (C) Copyright 1996, 2020 Custom Computer Services          ////
+.................... //// This source code may only be used by licensed users of the CCS C  ////
+.................... //// compiler.  This source code may only be distributed to other      ////
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction ////
+.................... //// or distribution is permitted without written permission.          ////
+.................... //// Derivative programs created using this software in object code    ////
+.................... //// form are not restricted in any way.                               ////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... #device PIC16F877
+0004:  BCF    0A.0
+0005:  BCF    0A.1
+0006:  BCF    0A.2
+0007:  ADDWF  02,F
+0008:  RETLW  3F
+0009:  RETLW  06
+000A:  RETLW  5B
+000B:  RETLW  4F
+000C:  RETLW  66
+000D:  RETLW  6D
+000E:  RETLW  7D
+000F:  RETLW  07
+0010:  RETLW  7F
+0011:  RETLW  6F
+0012:  RETLW  77
+0013:  RETLW  7C
+0014:  RETLW  39
+0015:  RETLW  5E
+0016:  RETLW  79
+0017:  RETLW  71
+.................... 
+.................... #list
+.................... 
+.................... #fuses XT, NOWDT, NOPROTECT, NOBROWNOUT, NOLVP, NOPUT, NOWRT, NODEBUG, NOCPD
+.................... #use delay(clock = 4000000)
+.................... #use fast_io(b)
+.................... #use fast_io(d)
+.................... 
+.................... const int digit[16] = {0x3f, 0x06, 0x5B, 0x4F, 0x66, 0x6D, 0x7D, 0x07, 0x7F,
+....................                        0x6F, 0x77, 0x7C, 0x39, 0x5E, 0x79, 0x71};
+.................... #define sut1 pin_d0
+.................... #define sut2 pin_d1
+.................... #define sut3 pin_d2
+.................... #define sat1 pin_d4
+.................... #define sat2 pin_d5
+.................... #define sat3 pin_d6
+.................... #define sat4 pin_d7
+.................... 
+.................... char tus = 0;
+.................... char keypad_oku() // Fonksiyon ismi
+.................... {
+....................     output_d(0x00); // D port'u çikisi sifirlaniyor
+0018:  CLRF   08
+....................     output_high(sat1); // 1. satir lojik-l yapiliyor
+0019:  BSF    08.4
+....................     if (input(sut1)) tus = 1; // 1. sütun okunuyor
+001A:  BTFSS  08.0
+001B:  GOTO   01E
+001C:  MOVLW  01
+001D:  MOVWF  20
+....................     if (input(sut2)) tus = 2; // 2. sütun okunuyor
+001E:  BTFSS  08.1
+001F:  GOTO   022
+0020:  MOVLW  02
+0021:  MOVWF  20
+....................     if (input(sut3)) tus = 3; // 3. sütun okunuyor
+0022:  BTFSS  08.2
+0023:  GOTO   026
+0024:  MOVLW  03
+0025:  MOVWF  20
+....................     output_low(sat1); // 1. satir lojik-O yapiliyor
+0026:  BCF    08.4
+....................     output_high(sat2); // 2. satir lojik-l yapiliyor
+0027:  BSF    08.5
+....................     if (input(sut1)) tus = 4; // 4. sütun okunuyor
+0028:  BTFSS  08.0
+0029:  GOTO   02C
+002A:  MOVLW  04
+002B:  MOVWF  20
+....................     if (input(sut2)) tus = 5; // 5. sütun okunuyor
+002C:  BTFSS  08.1
+002D:  GOTO   030
+002E:  MOVLW  05
+002F:  MOVWF  20
+....................     if (input(sut3)) tus = 6; // 6. sütun okunuyor
+0030:  BTFSS  08.2
+0031:  GOTO   034
+0032:  MOVLW  06
+0033:  MOVWF  20
+....................     output_low(sat2); // 2. satir lojik-O yapiliyor
+0034:  BCF    08.5
+....................     output_high(sat3); // 3. satir lojik-l yapiliyor
+0035:  BSF    08.6
+....................     if (input(sut1)) tus = 7; // 7. sütun okunuyor
+0036:  BTFSS  08.0
+0037:  GOTO   03A
+0038:  MOVLW  07
+0039:  MOVWF  20
+....................     if (input(sut2)) tus = 8; // 8. sütun okunuyor
+003A:  BTFSS  08.1
+003B:  GOTO   03E
+003C:  MOVLW  08
+003D:  MOVWF  20
+....................     if (input(sut3)) tus = 9; // 9. sütun okunuyor
+003E:  BTFSS  08.2
+003F:  GOTO   042
+0040:  MOVLW  09
+0041:  MOVWF  20
+....................     output_low(sat3); // 3. satir lojik-O yapiliyor
+0042:  BCF    08.6
+....................     output_high(sat4); // 4. satir lojik-l yapiliyor
+0043:  BSF    08.7
+....................     if (input(sut1)) tus = 0xA; // 10. sütun okunuyor
+0044:  BTFSS  08.0
+0045:  GOTO   048
+0046:  MOVLW  0A
+0047:  MOVWF  20
+....................     if (input(sut2)) tus = 0;  // 11. sütun okunuyor
+0048:  BTFSC  08.1
+0049:  CLRF   20
+....................     if (input(sut3)) tus = 0XB; // 12. sütun okunuyor
+004A:  BTFSS  08.2
+004B:  GOTO   04E
+004C:  MOVLW  0B
+004D:  MOVWF  20
+....................     output_low(sat4); // 4. satir lojik-O yapiliyor
+004E:  BCF    08.7
+....................     return tus;
+004F:  MOVF   20,W
+0050:  MOVWF  78
+0051:  BCF    0A.3
+0052:  BCF    0A.4
+0053:  GOTO   08D (RETURN)
+.................... }
+.................... 
+.................... void main()
+0054:  MOVF   03,W
+0055:  ANDLW  1F
+0056:  MOVWF  03
+0057:  CLRF   20
+0058:  MOVLW  FF
+0059:  MOVWF  21
+005A:  BSF    03.5
+005B:  BSF    1F.0
+005C:  BSF    1F.1
+005D:  BSF    1F.2
+005E:  BCF    1F.3
+005F:  BCF    03.7
+0060:  BCF    03.5
+0061:  CLRF   22
+.................... {
+....................     int x = 0;
+....................     setup_psp(PSP_DISABLED);     // PSP devre disi
+0062:  BSF    03.5
+0063:  BCF    09.4
+....................     setup_spi(SPI_SS_DISABLED);  // SPI devre disi
+0064:  BCF    03.5
+0065:  BCF    14.5
+0066:  BCF    21.5
+0067:  MOVF   21,W
+0068:  BSF    03.5
+0069:  MOVWF  07
+006A:  BCF    03.5
+006B:  BSF    21.4
+006C:  MOVF   21,W
+006D:  BSF    03.5
+006E:  MOVWF  07
+006F:  BCF    03.5
+0070:  BCF    21.3
+0071:  MOVF   21,W
+0072:  BSF    03.5
+0073:  MOVWF  07
+0074:  MOVLW  01
+0075:  BCF    03.5
+0076:  MOVWF  14
+0077:  MOVLW  00
+0078:  BSF    03.5
+0079:  MOVWF  14
+....................     setup_timer_1(T1_DISABLED);  // T1 devre disi
+007A:  BCF    03.5
+007B:  CLRF   10
+....................     setup_adc_ports(NO_ANALOGS); // analog giris yok
+007C:  BSF    03.5
+007D:  BSF    1F.0
+007E:  BSF    1F.1
+007F:  BSF    1F.2
+0080:  BCF    1F.3
+....................     setup_adc(ADC_OFF);          // ADC kapali
+0081:  BCF    03.5
+0082:  BCF    1F.0
+....................     setup_CCP2(CCP_OFF);         // CCP2 devredisi
+0083:  MOVLW  F0
+0084:  ANDWF  1D,F
+.................... 
+....................     set_tris_b(0x00);
+0085:  MOVLW  00
+0086:  BSF    03.5
+0087:  MOVWF  06
+....................     set_tris_d(0x0f);
+0088:  MOVLW  0F
+0089:  MOVWF  08
+....................     output_b(0x00);
+008A:  BCF    03.5
+008B:  CLRF   06
+....................     while (1)
+....................     {
+....................         x = keypad_oku();
+008C:  GOTO   018
+008D:  MOVF   78,W
+008E:  MOVWF  22
+....................         output_b(digit[x]);
+008F:  MOVF   22,W
+0090:  CALL   004
+0091:  MOVWF  23
+0092:  MOVWF  06
+0093:  GOTO   08C
+....................     }
+.................... }
+0094:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F39   XT NOWDT NOPUT NOBROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

@@ -1,0 +1,5 @@
+Compiling C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 8\ccs\pwm2\pwm2 on 12-Ara-23 at 14:29
+>>> Warning 203 "C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 8\ccs\pwm2\pwm2.c" Line 23(1,1): Condition always TRUE  8-bit value passed to function, only 8 MSB of duty will be set
+      Memory usage:   ROM=1%      RAM=1% - 1%
+      0 Errors,  1 Warnings.
+Build Successful.

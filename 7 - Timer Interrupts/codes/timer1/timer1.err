@@ -1,0 +1,5 @@
+Compiling C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 7\ccs\timer1\timer1 on 05-Ara-23 at 14:35
+>>> Warning 203 "C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 7\ccs\timer1\timer1.c" Line 31(1,1): Condition always TRUE
+      Memory usage:   ROM=2%      RAM=4% - 4%
+      0 Errors,  1 Warnings.
+Build Successful.

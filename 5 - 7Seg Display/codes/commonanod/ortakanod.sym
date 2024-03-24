@@ -1,0 +1,63 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     i
+021     @TRIS_C
+022     main.@SCRATCH1
+023     @delay_ms1.P1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  digit.call
+000008  digit.data
+000018  @delay_ms1
+00002F  main
+00002F  @cinit1
+00003A  @cinit2
+
+Project Directory:
+    C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 5\ccs\ortakanod\
+
+Project Files:
+    ortakanod.c                                             [30-Kas-23 00:59  CRC=C53BEA07]
+    ..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16f877.h [21-Eki-22 11:02  CRC=066EA136]
+
+Source signature=D2192C73
+Program memory checksum=0000
+Hex file CRC=9F2C
+
+Units:
+    C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 5\ccs\ortakanod\ortakanod (main)
+
+Compiler Settings:
+    Processor:      PIC16F877
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:   CCS5
+
+Output Files:
+    XREF file:   ortakanod.xsym
+    Errors:      ortakanod.err
+    Ext Symbols: ortakanod.esym
+    INHX8:       ortakanod.hex
+    Symbols:     ortakanod.sym
+    List:        ortakanod.lst
+    Debug/COFF:  ortakanod.cof
+    Project:     ortakanod.ccspjt
+    Call Tree:   ortakanod.tre
+    Statistics:  ortakanod.STA

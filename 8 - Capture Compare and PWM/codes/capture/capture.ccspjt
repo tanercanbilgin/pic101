@@ -1,0 +1,46 @@
+[PROJECT]
+Target=capture.hex
+Processor_Text=PIC16F877
+CCSVersion=5.112
+Compiler=PCM
+[Target Data]
+FileList=capture.c
+[capture.c]
+Type=4
+[mru-list]
+1=capture.c
+
+[defines]
+buildcount=11
+
+[ProjectLog]
+Days=3
+D1=10-12-2023
+D1_L=2
+D1_L1=[78697]Stopped Editing.
+TotalEdit=1
+TotalDebug=0
+D1_E=1
+D1_D=0
+D1_L2=[85799]Project Closed.
+D2=12-12-2023
+D2_L=2
+D2_L1=[54512]Project Opened.
+D2_L2=[54965]Project Closed.
+D3=16-01-2024
+D3_L=2
+D3_L1=[306]Project Opened.
+D3_L2=[1756]Project Closed.
+
+[Opened Files]
+1=capture.c
+t1=1
+2=..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16f877.h
+t2=1
+Count=1
+
+[fileformats]
+forcecoff=0
+[Units]
+Count=1
+1=capture (main)

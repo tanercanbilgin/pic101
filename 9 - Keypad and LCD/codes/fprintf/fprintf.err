@@ -1,0 +1,5 @@
+Compiling C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 9\ccs\fprintf\fprintf on 25-Ara-23 at 21:27
+>>> Warning 203 "C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 9\ccs\fprintf\fprintf.c" Line 28(1,1): Condition always TRUE
+      Memory usage:   ROM=13%      RAM=4% - 11%
+      0 Errors,  1 Warnings.
+Build Successful.

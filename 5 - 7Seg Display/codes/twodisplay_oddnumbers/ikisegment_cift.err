@@ -1,0 +1,5 @@
+Compiling C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 5\ccs\ikisegment_cift\ikisegment_cift on 16-Kas-23 at 15:40
+>>> Warning 203 "C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 5\ccs\ikisegment_cift\ikisegment_cift.c" Line 32(1,1): Condition always TRUE
+      Memory usage:   ROM=2%      RAM=3% - 4%
+      0 Errors,  1 Warnings.
+Build Successful.

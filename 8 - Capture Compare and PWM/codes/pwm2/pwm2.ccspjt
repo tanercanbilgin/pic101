@@ -1,0 +1,54 @@
+[PROJECT]
+Target=pwm2.hex
+Processor_Text=PIC16F877
+CCSVersion=5.112
+Compiler=PCM
+[Target Data]
+FileList=pwm2.c
+[pwm2.c]
+Type=4
+[mru-list]
+1=pwm2.c
+
+[defines]
+buildcount=31
+
+[Opened Files]
+1=pwm2.c
+t1=13
+Count=1
+2=..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16f877.h
+t2=1
+
+[ProjectLog]
+Days=1
+D1=12-12-2023
+D1_L=18
+D1_L1=[45371]Started Editing.
+D1_L2=[45671]Stopped Editing.
+D1_L3=[49712]Started Editing.
+D1_L4=[49839]Project Closed.
+D1_L5=[49856]Project Opened.
+D1_L6=[49885]Started Editing.
+D1_L7=[50188]Stopped Editing.
+D1_L8=[50268]Started Editing.
+D1_L9=[50568]Stopped Editing.
+TotalEdit=9
+TotalDebug=0
+D1_E=9
+D1_D=0
+D1_L10=[51565]Project Closed.
+D1_L11=[51579]Project Opened.
+D1_L12=[51617]Project Closed.
+D1_L13=[51641]Project Opened.
+D1_L14=[51724]Started Editing.
+D1_L15=[52462]Stopped Editing.
+D1_L16=[54078]Started Editing.
+D1_L17=[54378]Stopped Editing.
+D1_L18=[54498]Project Closed.
+
+[fileformats]
+forcecoff=0
+[Units]
+Count=1
+1=pwm2 (main)

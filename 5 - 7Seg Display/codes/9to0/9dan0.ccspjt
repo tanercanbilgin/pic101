@@ -1,0 +1,46 @@
+[PROJECT]
+Target=9dan0.hex
+Processor_Text=PIC16F877
+CCSVersion=5.112
+Compiler=PCM
+[Target Data]
+FileList=9dan0.c
+[9dan0.c]
+Type=4
+[mru-list]
+1=9dan0.c
+
+[defines]
+buildcount=6
+
+[Opened Files]
+1=..\ikisegment_cift\ikisegment_cift.c
+t1=1
+2=..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16f877.h
+t2=1
+Count=1
+
+[ProjectLog]
+Days=2
+D1=14-11-2023
+D1_L=2
+D1_L1=[50999]Stopped Editing.
+TotalEdit=3
+TotalDebug=0
+D1_E=1
+D1_D=0
+D1_L2=[51523]Project Closed.
+D2=16-11-2023
+D2_L=4
+D2_L1=[54750]Project Opened.
+D2_L2=[56262]Started Editing.
+D2_L3=[56332]Stopped Editing.
+D2_E=2
+D2_D=0
+D2_L4=[56332]Project Closed.
+
+[fileformats]
+forcecoff=0
+[Units]
+Count=1
+1=9dan0 (main)

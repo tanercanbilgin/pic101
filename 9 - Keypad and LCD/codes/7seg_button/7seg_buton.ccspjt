@@ -1,0 +1,40 @@
+[PROJECT]
+Target=7seg_buton.hex
+Processor_Text=PIC16F877
+CCSVersion=5.112
+Compiler=PCM
+[Target Data]
+FileList=7seg_buton.c
+[7seg_buton.c]
+Type=4
+[mru-list]
+1=7seg_buton.c
+
+[defines]
+buildcount=6
+
+[ProjectLog]
+Days=2
+D1=25-12-2023
+D1_L=2
+D1_L1=[73577]Stopped Editing.
+TotalEdit=1
+TotalDebug=0
+D1_E=1
+D1_D=0
+D1_L2=[74846]Project Closed.
+D2=16-01-2024
+D2_L=2
+D2_L1=[37543]Project Opened.
+D2_L2=[68096]Project Closed.
+
+[fileformats]
+forcecoff=0
+
+[Opened Files]
+1=7seg_buton.c
+t1=1
+Count=1
+[Units]
+Count=1
+1=7seg_buton (main)

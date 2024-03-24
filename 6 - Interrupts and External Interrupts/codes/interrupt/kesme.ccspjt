@@ -1,0 +1,30 @@
+[PROJECT]
+Target=kesme.hex
+Processor_Text=PIC16F877
+CCSVersion=5.112
+Compiler=PCM
+[Target Data]
+FileList=kesme.c
+[kesme.c]
+Type=4
+[mru-list]
+1=kesme.c
+[Units]
+Count=1
+1=kesme (main)
+
+[defines]
+buildcount=1
+
+[ProjectLog]
+Days=2
+D1=18-11-2023
+D1_L=1
+D1_L1=[86221]Project Closed.
+D2=16-01-2024
+D2_L=2
+D2_L1=[3230]Project Opened.
+D2_L2=[9938]Project Closed.
+
+[fileformats]
+forcecoff=0

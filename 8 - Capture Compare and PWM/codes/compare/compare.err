@@ -1,0 +1,5 @@
+Compiling C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 8\ccs\compare\compare on 16-Oca-24 at 00:29
+>>> Warning 203 "C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 8\ccs\compare\compare.c" Line 36(1,1): Condition always TRUE
+      Memory usage:   ROM=1%      RAM=3% - 3%
+      0 Errors,  1 Warnings.
+Build Successful.

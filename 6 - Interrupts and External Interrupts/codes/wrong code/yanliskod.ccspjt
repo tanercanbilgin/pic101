@@ -1,0 +1,37 @@
+[PROJECT]
+Target=yanliskod.hex
+Processor_Text=PIC16F877
+CCSVerions=5.112
+Compiler=PCM
+CCSVersion=5.112
+[Target Data]
+FileList=yanliskod.c
+[Directories]
+Include=
+[C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 6\ccs\yanliskod\yanliskod]
+Type=4
+[mru-list]
+1=yanliskod.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=1
+D1=18-11-2023
+D1_L=2
+D1_L1=[82228]Project Opened.
+D1_L2=[82376]Project Closed.
+
+[Opened Files]
+1=yanliskod.c
+t1=1
+Count=1
+[yanliskod.c]
+Type=4
+[Units]
+Count=1
+1=yanliskod (main)
+
+[defines]
+buildcount=1

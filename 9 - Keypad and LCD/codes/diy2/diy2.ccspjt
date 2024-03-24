@@ -1,0 +1,49 @@
+[PROJECT]
+Target=diy2.hex
+Processor_Text=PIC16F877A
+CCSVersion=5.112
+Compiler=PCM
+[Target Data]
+FileList=diy2.c
+[diy2.c]
+Type=4
+[mru-list]
+1=diy2.c
+
+[defines]
+buildcount=79
+
+[Opened Files]
+1=..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16f877a.h
+t1=210
+Count=2
+2=diy2.c
+t2=210
+
+[ProjectLog]
+Days=1
+D1=26-12-2023
+D1_L=13
+D1_L1=[586]Started Editing.
+D1_L2=[909]Stopped Editing.
+TotalEdit=10
+TotalDebug=0
+D1_E=10
+D1_D=0
+D1_L3=[1472]Project Closed.
+D1_L4=[50506]Project Opened.
+D1_L5=[57010]Started Editing.
+D1_L6=[57077]Stopped Editing.
+D1_L7=[57077]Project Closed.
+D1_L8=[57350]Project Opened.
+D1_L9=[58526]Started Editing.
+D1_L10=[58828]Stopped Editing.
+D1_L11=[58833]Started Editing.
+D1_L12=[59545]Stopped Editing.
+D1_L13=[59725]Project Closed.
+
+[fileformats]
+forcecoff=0
+[Units]
+Count=1
+1=diy2 (main)

@@ -1,0 +1,189 @@
+CCS PCM C Compiler, Version 5.112, 5967               07-Kas-23 14:14
+
+               Filename:   C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 4\compiler\kayan ledler\1\main.lst
+
+               ROM used:   122 words (1%)
+                           Largest free fragment is 2048
+               RAM used:   8 (2%) at main() level
+                           9 (2%) worst case
+               Stack used: 0 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   019
+0003:  NOP
+.................... #include <16f877.h>
+.................... //////////// Standard Header file for the PIC16F877 device ////////////////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... ////        (C) Copyright 1996, 2020 Custom Computer Services          ////
+.................... //// This source code may only be used by licensed users of the CCS C  ////
+.................... //// compiler.  This source code may only be distributed to other      ////
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction ////
+.................... //// or distribution is permitted without written permission.          ////
+.................... //// Derivative programs created using this software in object code    ////
+.................... //// form are not restricted in any way.                               ////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... #device PIC16F877
+.................... 
+.................... #list
+.................... 
+.................... #fuses XT, NOWDT, NOPROTECT, NOBROWNOUT, , NOLVP, NOPUT, NOWRT, NODEBUG, NOCPD
+.................... #use delay(clock = 4000000)
+0004:  MOVLW  23
+0005:  MOVWF  04
+0006:  BCF    03.7
+0007:  MOVF   00,W
+0008:  BTFSC  03.2
+0009:  GOTO   018
+000A:  MOVLW  01
+000B:  MOVWF  78
+000C:  CLRF   77
+000D:  DECFSZ 77,F
+000E:  GOTO   00D
+000F:  DECFSZ 78,F
+0010:  GOTO   00C
+0011:  MOVLW  4A
+0012:  MOVWF  77
+0013:  DECFSZ 77,F
+0014:  GOTO   013
+0015:  GOTO   016
+0016:  DECFSZ 00,F
+0017:  GOTO   00A
+0018:  RETURN
+.................... #use fast_io(b)
+.................... void main()
+0019:  MOVF   03,W
+001A:  ANDLW  1F
+001B:  MOVWF  03
+001C:  MOVLW  FF
+001D:  MOVWF  20
+001E:  BSF    03.5
+001F:  BSF    1F.0
+0020:  BSF    1F.1
+0021:  BSF    1F.2
+0022:  BCF    1F.3
+0023:  BCF    03.7
+0024:  MOVLW  01
+0025:  BCF    03.5
+0026:  MOVWF  21
+.................... {
+....................    int led = 0x01;
+....................    setup_psp(PSP_DISABLED);        // PSP devre disi
+0027:  BSF    03.5
+0028:  BCF    09.4
+....................    setup_spi(SPI_SS_DISABLED);        // SPI devre disi
+0029:  BCF    03.5
+002A:  BCF    14.5
+002B:  BCF    20.5
+002C:  MOVF   20,W
+002D:  BSF    03.5
+002E:  MOVWF  07
+002F:  BCF    03.5
+0030:  BSF    20.4
+0031:  MOVF   20,W
+0032:  BSF    03.5
+0033:  MOVWF  07
+0034:  BCF    03.5
+0035:  BCF    20.3
+0036:  MOVF   20,W
+0037:  BSF    03.5
+0038:  MOVWF  07
+0039:  MOVLW  01
+003A:  BCF    03.5
+003B:  MOVWF  14
+003C:  MOVLW  00
+003D:  BSF    03.5
+003E:  MOVWF  14
+....................    setup_timer_1(T1_DISABLED);        // T1 devre disi
+003F:  BCF    03.5
+0040:  CLRF   10
+....................    setup_timer_2(T2_DISABLED, 0, 1); // T2 devre disi
+0041:  MOVWF  78
+0042:  MOVWF  12
+0043:  MOVLW  00
+0044:  BSF    03.5
+0045:  MOVWF  12
+....................    setup_adc_ports(NO_ANALOGS);     // analog giris yok
+0046:  BSF    1F.0
+0047:  BSF    1F.1
+0048:  BSF    1F.2
+0049:  BCF    1F.3
+....................    setup_adc(ADC_OFF);              // ADC kapali
+004A:  BCF    03.5
+004B:  BCF    1F.0
+....................    setup_CCP1(CCP_OFF);           // CCP1 devre disi
+004C:  MOVLW  F0
+004D:  ANDWF  17,F
+....................    setup_CCP2(CCP_OFF);           // CCP2 devredisi
+004E:  ANDWF  1D,F
+.................... 
+....................    set_tris_b(0x00); // B portu bütün pinler cikis
+004F:  MOVLW  00
+0050:  BSF    03.5
+0051:  MOVWF  06
+....................    output_b(0x00);     // baslangicta 1. led yanik
+0052:  BCF    03.5
+0053:  CLRF   06
+.................... 
+....................    while (1)
+....................    {
+....................       output_b(led); // RB0 pin çikisi lojik-1
+0054:  MOVF   21,W
+0055:  MOVWF  06
+....................       if (input(pin_a0) == 0)
+0056:  BSF    03.5
+0057:  BSF    05.0
+0058:  BCF    03.5
+0059:  BTFSC  05.0
+005A:  GOTO   06A
+....................       {
+....................          delay_ms(1000);
+005B:  MOVLW  04
+005C:  MOVWF  22
+005D:  MOVLW  FA
+005E:  MOVWF  23
+005F:  CALL   004
+0060:  DECFSZ 22,F
+0061:  GOTO   05D
+....................          led = led << 1;
+0062:  BCF    03.0
+0063:  RLF    21,F
+....................          if (led == 0x00)
+0064:  MOVF   21,F
+0065:  BTFSS  03.2
+0066:  GOTO   069
+....................             led = 0x01;
+0067:  MOVLW  01
+0068:  MOVWF  21
+....................       }
+0069:  GOTO   078
+....................       else
+....................       {
+....................          delay_ms(1000);
+006A:  MOVLW  04
+006B:  MOVWF  22
+006C:  MOVLW  FA
+006D:  MOVWF  23
+006E:  CALL   004
+006F:  DECFSZ 22,F
+0070:  GOTO   06C
+....................          led = led >> 1;
+0071:  BCF    03.0
+0072:  RRF    21,F
+....................          if (led == 0x00)
+0073:  MOVF   21,F
+0074:  BTFSS  03.2
+0075:  GOTO   078
+....................             led = 0x80;
+0076:  MOVLW  80
+0077:  MOVWF  21
+....................       }
+0078:  GOTO   054
+....................    }
+.................... }
+0079:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F39   XT NOWDT NOPUT NOBROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

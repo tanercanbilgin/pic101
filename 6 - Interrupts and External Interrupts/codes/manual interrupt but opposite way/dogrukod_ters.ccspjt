@@ -1,0 +1,43 @@
+[PROJECT]
+Target=dogrukod_ters.hex
+Processor_Text=PIC16F877
+CCSVersion=5.112
+Compiler=PCM
+[Target Data]
+FileList=dogrukod_ters.c
+[dogrukod_ters.c]
+Type=4
+[mru-list]
+1=dogrukod_ters.c
+
+[defines]
+buildcount=22
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=2
+D1=18-11-2023
+D1_L=3
+D1_L1=[86006]Started Editing.
+D1_L2=[86023]Stopped Editing.
+TotalEdit=1
+TotalDebug=0
+D1_E=1
+D1_D=0
+D1_L3=[86023]Project Closed.
+D2=21-11-2023
+D2_L=2
+D2_L1=[50272]Project Opened.
+D2_L2=[51890]Project Closed.
+
+[Opened Files]
+1=..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16f877.h
+t1=1
+Count=2
+2=dogrukod_ters.c
+t2=1
+[Units]
+Count=1
+1=dogrukod_ters (main)

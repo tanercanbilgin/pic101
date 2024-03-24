@@ -1,0 +1,5 @@
+Compiling C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 6\ccs\kesme_ters\kesme_ters on 21-Kas-23 at 14:25
+>>> Warning 203 "C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 6\ccs\kesme_ters\kesme_ters.c" Line 31(1,1): Condition always TRUE
+      Memory usage:   ROM=1%      RAM=4% - 4%
+      0 Errors,  1 Warnings.
+Build Successful.

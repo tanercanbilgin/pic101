@@ -1,0 +1,45 @@
+[PROJECT]
+Target=bonus.hex
+Processor_Text=PIC16F877
+CCSVersion=5.112
+Compiler=PCM
+[Target Data]
+FileList=bonus.c
+[bonus.c]
+Type=4
+[mru-list]
+1=bonus.c
+
+[defines]
+buildcount=6
+
+[Opened Files]
+1=bonus.c
+t1=13
+Count=1
+
+[ProjectLog]
+Days=2
+D1=19-11-2023
+D1_L=3
+D1_L1=[6407]Started Editing.
+D1_L2=[6708]Stopped Editing.
+TotalEdit=2
+TotalDebug=0
+D1_E=1
+D1_D=0
+D1_L3=[7484]Project Closed.
+D2=21-11-2023
+D2_L=4
+D2_L1=[54327]Project Opened.
+D2_L2=[54457]Started Editing.
+D2_L3=[54516]Stopped Editing.
+D2_E=1
+D2_D=0
+D2_L4=[54516]Project Closed.
+
+[fileformats]
+forcecoff=0
+[Units]
+Count=1
+1=bonus (main)

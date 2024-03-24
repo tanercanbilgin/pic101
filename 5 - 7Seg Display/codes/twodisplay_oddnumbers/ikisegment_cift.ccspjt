@@ -1,0 +1,45 @@
+[PROJECT]
+Target=ikisegment_cift.hex
+Processor_Text=PIC16F877
+CCSVersion=5.112
+Compiler=PCM
+[Target Data]
+FileList=ikisegment_cift.c
+[ikisegment_cift.c]
+Type=4
+[mru-list]
+1=ikisegment_cift.c
+
+[defines]
+buildcount=5
+
+[Opened Files]
+1=ikisegment_cift.c
+t1=20
+Count=1
+
+[ProjectLog]
+Days=3
+D1=14-11-2023
+D1_L=1
+D1_L1=[54214]Project Closed.
+D2=16-11-2023
+D2_L=4
+D2_L1=[56341]Project Opened.
+D2_L2=[56400]Started Editing.
+D2_L3=[56538]Stopped Editing.
+TotalEdit=3
+TotalDebug=0
+D2_E=3
+D2_D=0
+D2_L4=[56538]Project Closed.
+D3=18-11-2023
+D3_L=2
+D3_L1=[82024]Project Opened.
+D3_L2=[82228]Project Closed.
+
+[fileformats]
+forcecoff=0
+[Units]
+Count=1
+1=ikisegment_cift (main)

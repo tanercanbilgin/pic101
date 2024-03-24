@@ -1,0 +1,130 @@
+CCS PCM C Compiler, Version 5.112, 5967               21-Kas-23 14:22
+
+               Filename:   C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 6\ccs\dogrukod_ters\dogrukod_ters.lst
+
+               ROM used:   68 words (1%)
+                           Largest free fragment is 2048
+               RAM used:   7 (2%) at main() level
+                           7 (2%) worst case
+               Stack used: 0 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   004
+0003:  NOP
+.................... #include <16f877.h>
+.................... //////////// Standard Header file for the PIC16F877 device ////////////////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... ////        (C) Copyright 1996, 2020 Custom Computer Services          ////
+.................... //// This source code may only be used by licensed users of the CCS C  ////
+.................... //// compiler.  This source code may only be distributed to other      ////
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction ////
+.................... //// or distribution is permitted without written permission.          ////
+.................... //// Derivative programs created using this software in object code    ////
+.................... //// form are not restricted in any way.                               ////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... #device PIC16F877
+.................... 
+.................... #list
+.................... 
+.................... #fuses XT, NOWDT, NOPROTECT, NOBROWNOUT, , NOLVP, NOPUT, NOWRT, NODEBUG, NOCPD
+.................... #use delay(clock = 4000000)
+.................... #use fast_io(b)
+.................... void main()
+0004:  MOVF   03,W
+0005:  ANDLW  1F
+0006:  MOVWF  03
+0007:  MOVLW  FF
+0008:  MOVWF  20
+0009:  BSF    03.5
+000A:  BSF    1F.0
+000B:  BSF    1F.1
+000C:  BSF    1F.2
+000D:  BCF    1F.3
+000E:  BCF    03.7
+.................... {
+.................... 	setup_psp(PSP_DISABLED);		  // PSP devre disi
+000F:  BCF    09.4
+.................... 	setup_spi(SPI_SS_DISABLED);		  // SPI devre disi
+0010:  BCF    03.5
+0011:  BCF    14.5
+0012:  BCF    20.5
+0013:  MOVF   20,W
+0014:  BSF    03.5
+0015:  MOVWF  07
+0016:  BCF    03.5
+0017:  BSF    20.4
+0018:  MOVF   20,W
+0019:  BSF    03.5
+001A:  MOVWF  07
+001B:  BCF    03.5
+001C:  BCF    20.3
+001D:  MOVF   20,W
+001E:  BSF    03.5
+001F:  MOVWF  07
+0020:  MOVLW  01
+0021:  BCF    03.5
+0022:  MOVWF  14
+0023:  MOVLW  00
+0024:  BSF    03.5
+0025:  MOVWF  14
+.................... 	setup_timer_1(T1_DISABLED);		  // T1 devre disi
+0026:  BCF    03.5
+0027:  CLRF   10
+.................... 	setup_timer_2(T2_DISABLED, 0, 1); // T2 devre disi
+0028:  MOVWF  78
+0029:  MOVWF  12
+002A:  MOVLW  00
+002B:  BSF    03.5
+002C:  MOVWF  12
+.................... 	setup_adc_ports(NO_ANALOGS);	  // analog giris yok
+002D:  BSF    1F.0
+002E:  BSF    1F.1
+002F:  BSF    1F.2
+0030:  BCF    1F.3
+.................... 	setup_adc(ADC_OFF);				  // ADC kapali
+0031:  BCF    03.5
+0032:  BCF    1F.0
+.................... 	setup_CCP1(CCP_OFF);			  // CCP1 devre disi
+0033:  MOVLW  F0
+0034:  ANDWF  17,F
+.................... 	setup_CCP2(CCP_OFF);			  // CCP2 devredisi
+0035:  ANDWF  1D,F
+.................... 
+.................... 	set_tris_b(0x01); // RB0 portu giris diger butun pinler cikis
+0036:  MOVLW  01
+0037:  BSF    03.5
+0038:  MOVWF  06
+.................... 	output_b(0x00);
+0039:  BCF    03.5
+003A:  CLRF   06
+.................... 
+.................... 	while (1)
+.................... 	{
+.................... 
+.................... 		if (input(pin_b0) == 1) // buton kontrol
+003B:  BTFSS  06.0
+003C:  GOTO   042
+.................... 		{
+.................... 			while (input(pin_b0) == 1)
+003D:  BTFSS  06.0
+003E:  GOTO   040
+.................... 			{
+003F:  GOTO   03D
+.................... 				// butondan el cekilene kadar bekle
+.................... 			}
+.................... 			
+.................... 			output_toggle(pin_b1); // LED'in turumunu tersle
+0040:  MOVLW  02
+0041:  XORWF  06,F
+.................... 
+.................... 		}
+0042:  GOTO   03B
+.................... 	}
+.................... }
+0043:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F39   XT NOWDT NOPUT NOBROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

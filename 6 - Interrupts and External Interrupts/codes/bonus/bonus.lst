@@ -1,0 +1,279 @@
+CCS PCM C Compiler, Version 5.112, 5967               21-Kas-23 15:07
+
+               Filename:   C:\Users\Administrator\Desktop\notes\3_Sinif\1_Donem\Mikroislemciler\lab\lab 6\ccs\bonus\bonus.lst
+
+               ROM used:   182 words (2%)
+                           Largest free fragment is 2048
+               RAM used:   16 (4%) at main() level
+                           17 (5%) worst case
+               Stack used: 1 locations (0 in main + 1 for interrupts)
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   05A
+0003:  NOP
+0004:  MOVWF  7F
+0005:  SWAPF  03,W
+0006:  CLRF   03
+0007:  MOVWF  21
+0008:  MOVF   0A,W
+0009:  MOVWF  20
+000A:  CLRF   0A
+000B:  MOVF   04,W
+000C:  MOVWF  22
+000D:  MOVF   77,W
+000E:  MOVWF  23
+000F:  MOVF   78,W
+0010:  MOVWF  24
+0011:  MOVF   79,W
+0012:  MOVWF  25
+0013:  MOVF   7A,W
+0014:  MOVWF  26
+0015:  BCF    03.7
+0016:  BCF    03.5
+0017:  BTFSS  0B.4
+0018:  GOTO   01B
+0019:  BTFSC  0B.1
+001A:  GOTO   02C
+001B:  MOVF   22,W
+001C:  MOVWF  04
+001D:  MOVF   23,W
+001E:  MOVWF  77
+001F:  MOVF   24,W
+0020:  MOVWF  78
+0021:  MOVF   25,W
+0022:  MOVWF  79
+0023:  MOVF   26,W
+0024:  MOVWF  7A
+0025:  MOVF   20,W
+0026:  MOVWF  0A
+0027:  SWAPF  21,W
+0028:  MOVWF  03
+0029:  SWAPF  7F,F
+002A:  SWAPF  7F,W
+002B:  RETFIE
+002C:  BCF    0A.3
+002D:  BCF    0A.4
+002E:  GOTO   03D
+.................... #include <16f877.h>
+.................... //////////// Standard Header file for the PIC16F877 device ////////////////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... ////        (C) Copyright 1996, 2020 Custom Computer Services          ////
+.................... //// This source code may only be used by licensed users of the CCS C  ////
+.................... //// compiler.  This source code may only be distributed to other      ////
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction ////
+.................... //// or distribution is permitted without written permission.          ////
+.................... //// Derivative programs created using this software in object code    ////
+.................... //// form are not restricted in any way.                               ////
+.................... ///////////////////////////////////////////////////////////////////////////
+.................... #device PIC16F877
+002F:  BCF    0A.0
+0030:  BCF    0A.1
+0031:  BCF    0A.2
+0032:  ADDWF  02,F
+0033:  RETLW  7E
+0034:  RETLW  0C
+0035:  RETLW  B6
+0036:  RETLW  9E
+0037:  RETLW  CC
+0038:  RETLW  DA
+0039:  RETLW  F8
+003A:  RETLW  0E
+003B:  RETLW  FE
+003C:  RETLW  DE
+.................... 
+.................... #list
+.................... 
+.................... #fuses XT, NOWDT, NOPROTECT, NOBROWNOUT, NOLVP, NOPUT, NOWRT, NODEBUG, NOCPD
+.................... #use delay(clock = 4000000)
+*
+0043:  MOVLW  2B
+0044:  MOVWF  04
+0045:  BCF    03.7
+0046:  MOVF   00,W
+0047:  BTFSC  03.2
+0048:  GOTO   057
+0049:  MOVLW  01
+004A:  MOVWF  78
+004B:  CLRF   77
+004C:  DECFSZ 77,F
+004D:  GOTO   04C
+004E:  DECFSZ 78,F
+004F:  GOTO   04B
+0050:  MOVLW  4A
+0051:  MOVWF  77
+0052:  DECFSZ 77,F
+0053:  GOTO   052
+0054:  GOTO   055
+0055:  DECFSZ 00,F
+0056:  GOTO   049
+0057:  BCF    0A.3
+0058:  BCF    0A.4
+0059:  GOTO   0A3 (RETURN)
+.................... #use fast_io(b)
+.................... 
+.................... // *** Sayilar ve Kesme Fonksiyonu ***
+.................... boolean kontrol = false;
+.................... int i = 0;
+.................... const int digit[10] = {
+....................    0x7E, // 0
+....................    0xC,  // 1
+....................    0xB6, // 2
+....................    0x9E, // 3
+....................    0xCC, // 4
+....................    0xDA, // 5
+....................    0xF8, // 6
+....................    0xE,  // 7
+....................    0xFE, // 8
+....................    0xDE  // 9
+.................... };
+.................... 
+.................... #int_ext         // Dis (External) RB0/INT kesmesi
+.................... void ext_kesmesi() // Sayilar ve Kesme Fonksiyonu
+.................... {
+....................    kontrol = !kontrol;
+*
+003D:  MOVLW  01
+003E:  XORWF  27,F
+003F:  BCF    0B.1
+0040:  BCF    0A.3
+0041:  BCF    0A.4
+0042:  GOTO   01B
+.................... }
+.................... 
+.................... // ********* ANA PROGRAM FONKSIYONU********
+.................... void main()
+*
+005A:  MOVF   03,W
+005B:  ANDLW  1F
+005C:  MOVWF  03
+005D:  BCF    27.0
+005E:  CLRF   28
+005F:  MOVLW  FF
+0060:  MOVWF  29
+0061:  BSF    03.5
+0062:  BSF    1F.0
+0063:  BSF    1F.1
+0064:  BSF    1F.2
+0065:  BCF    1F.3
+0066:  BCF    03.7
+.................... {
+....................    setup_psp(PSP_DISABLED);        // PSP devre disi
+0067:  BCF    09.4
+....................    setup_spi(SPI_SS_DISABLED);        // SPI devre disi
+0068:  BCF    03.5
+0069:  BCF    14.5
+006A:  BCF    29.5
+006B:  MOVF   29,W
+006C:  BSF    03.5
+006D:  MOVWF  07
+006E:  BCF    03.5
+006F:  BSF    29.4
+0070:  MOVF   29,W
+0071:  BSF    03.5
+0072:  MOVWF  07
+0073:  BCF    03.5
+0074:  BCF    29.3
+0075:  MOVF   29,W
+0076:  BSF    03.5
+0077:  MOVWF  07
+0078:  MOVLW  01
+0079:  BCF    03.5
+007A:  MOVWF  14
+007B:  MOVLW  00
+007C:  BSF    03.5
+007D:  MOVWF  14
+....................    setup_timer_1(T1_DISABLED);        // T1 devre disi
+007E:  BCF    03.5
+007F:  CLRF   10
+....................    setup_timer_2(T2_DISABLED, 0, 1); // T2 devre disi
+0080:  MOVWF  78
+0081:  MOVWF  12
+0082:  MOVLW  00
+0083:  BSF    03.5
+0084:  MOVWF  12
+....................    setup_adc_ports(NO_ANALOGS);     // analog giris yok
+0085:  BSF    1F.0
+0086:  BSF    1F.1
+0087:  BSF    1F.2
+0088:  BCF    1F.3
+....................    setup_adc(ADC_OFF);              // ADC kapali
+0089:  BCF    03.5
+008A:  BCF    1F.0
+....................    setup_CCP1(CCP_OFF);           // CCP1 devre disi
+008B:  MOVLW  F0
+008C:  ANDWF  17,F
+....................    setup_CCP2(CCP_OFF);           // CCP2 devredisi
+008D:  ANDWF  1D,F
+.................... 
+....................    set_tris_b(0x01); // RB0 portu giris diger bütün pinler cikis
+008E:  MOVLW  01
+008F:  BSF    03.5
+0090:  MOVWF  06
+....................    output_b(0x7E);
+0091:  MOVLW  7E
+0092:  BCF    03.5
+0093:  MOVWF  06
+.................... 
+....................    ext_int_edge(L_TO_H); // INT_EXT kesmesi yükselen kenarda aktif
+0094:  BSF    03.5
+0095:  BSF    01.6
+.................... 
+....................    enable_interrupts(INT_EXT); // INT_EXT (RB0) kesmesi aktif
+0096:  BCF    03.5
+0097:  BSF    0B.4
+....................    enable_interrupts(GLOBAL);   // Aktif edilen sekmelere izin ver
+0098:  MOVLW  C0
+0099:  IORWF  0B,F
+.................... 
+....................    while (1)
+....................    {
+....................       output_b(digit[i]); // RB0 pin cikisi lojik-1
+009A:  MOVF   28,W
+009B:  CALL   02F
+009C:  MOVWF  2A
+009D:  MOVWF  06
+....................       delay_ms(500);      // 500 ms gecikme
+009E:  MOVLW  02
+009F:  MOVWF  2A
+00A0:  MOVLW  FA
+00A1:  MOVWF  2B
+00A2:  GOTO   043
+00A3:  DECFSZ 2A,F
+00A4:  GOTO   0A0
+....................       if (kontrol)
+00A5:  BTFSS  27.0
+00A6:  GOTO   0AF
+....................       {
+....................          i--;
+00A7:  DECF   28,F
+....................          if (i == -1)
+00A8:  MOVF   28,W
+00A9:  SUBLW  FF
+00AA:  BTFSS  03.2
+00AB:  GOTO   0AE
+....................             i = 9;
+00AC:  MOVLW  09
+00AD:  MOVWF  28
+....................       }
+00AE:  GOTO   0B4
+....................       else
+....................       {
+....................          i++;
+00AF:  INCF   28,F
+....................          if (i == 10)
+00B0:  MOVF   28,W
+00B1:  SUBLW  0A
+00B2:  BTFSC  03.2
+....................             i = 0;
+00B3:  CLRF   28
+....................       }
+00B4:  GOTO   09A
+....................    }
+.................... }
+00B5:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F39   XT NOWDT NOPUT NOBROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

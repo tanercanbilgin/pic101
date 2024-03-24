@@ -1,0 +1,45 @@
+[PROJECT]
+Target=kesme_ters.hex
+Processor_Text=PIC16F877
+CCSVersion=5.112
+Compiler=PCM
+[Target Data]
+FileList=kesme_ters.c
+[kesme_ters.c]
+Type=4
+[mru-list]
+1=kesme_ters.c
+
+[defines]
+buildcount=16
+
+[fileformats]
+forcecoff=0
+
+[Opened Files]
+1=kesme_ters.c
+t1=1
+Count=1
+2=..\..\..\..\..\..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16f877.h
+t2=1
+
+[ProjectLog]
+Days=2
+D1=19-11-2023
+D1_L=7
+D1_L1=[823]Project Closed.
+D1_L2=[832]Project Opened.
+D1_L3=[878]Project Closed.
+D1_L4=[1376]Project Opened.
+D1_L5=[1429]Project Closed.
+D1_L6=[1440]Project Opened.
+D1_L7=[2320]Project Closed.
+D2=21-11-2023
+D2_L=4
+D2_L1=[49799]Project Opened.
+D2_L2=[50260]Project Closed.
+D2_L3=[51901]Project Opened.
+D2_L4=[52352]Project Closed.
+[Units]
+Count=1
+1=kesme_ters (main)
